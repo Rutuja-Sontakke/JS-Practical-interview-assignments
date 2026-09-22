@@ -14,7 +14,7 @@ form.addEventListener("submit", function (event) {
     document.getElementById("email").value.trim();
 
     const password = 
-    document.getElemntById("password").value;
+    document.getElementById("password").value;
 
     const confirmpassword =
     document.getElementById("confirm").value;
@@ -30,7 +30,7 @@ form.addEventListener("submit", function (event) {
 
     //2. check password 
 
-    if(password !== confirm) {
+    if(password !== confirmpassword) {
         message.textContent = "password do not match"
         return;
     }
@@ -46,7 +46,15 @@ form.addEventListener("submit", function (event) {
     )
 
     if (existingUser) {
-        message.textContent = "Email alredy registred"
+        message.textContent = "Email already registred"
+    }
+
+    //define the newUser
+
+    const newUser = {
+        name: name,
+        email: email,
+        password: password
     }
 
     //5. adding user to array
@@ -66,5 +74,4 @@ form.addEventListener("submit", function (event) {
 
     //8. clear form
     form.reset();
-
 })
