@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form h1 {
+  color: #333333;
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 24px;
+} 
+
+.form input {
+    width: 100%;
+    padding: 12px 0px;
+    margin-bottom: 15px;
+    border: 1px solid #333333;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+
+}
+
+.form input::placeholder {
+    color: #999999;
+    font-size: 13px;
+    padding-left: 4px;
+}
+
+.form input:focus {
+    border-color: hsl(211, 75%, 77%);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+
+}
+
+.form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #76b2f1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #003d7d;
+}
+
+#message {
+  margin-top: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
