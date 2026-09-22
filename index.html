@@ -6,17 +6,38 @@
     <title>Registration form</title>
 </head>
 <body>
-    <h1> Register Here </h1>
-    <form action="">
-        <input type = "text" name ="username" placeholder ="Enter Your name" required> 
+    <h1> Register Form </h1>
+    <form id="registrationform" action="">
+
+        <input type = "text" 
+        id ="username" 
+        placeholder ="Enter Your name" 
+        required> 
         <br>
-        <input type="text" name="password" placeholder = "Enter your password" required>
+
+        <input type="text" 
+        id="password" 
+        placeholder = "Enter your password" 
+        required>
         <br>
-        <input type="text" name="confirm" placeholder="Confirm your password" required>
+
+        <input type="text" 
+        id="confirm" 
+        placeholder="Confirm your password" 
+        required>
         <br>
-        <input type="text" name="email" placeholder="enter you email" required>
+
+        <input type="text" 
+        id="email" 
+        placeholder="enter you email" 
+        required>
         <br>
+
         <button type="submit" name="submit">Register</button>
     </form>
+
+    <p id="message"></p>
+    
+    <script src="main.js"></script>
 </body>
 </html>
