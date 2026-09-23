@@ -29,7 +29,7 @@ function App() {
     const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
 
     setUsers(storedUsers);
-  }, []);
+  }, []);   //dependancy array.. runs when id get updated or id changes 
 
   //5. Handle input changes
 
@@ -124,6 +124,20 @@ function App() {
     setMessage("User deleted successfully!");
   }
 
+  // const editUser = (id) => {
+  //   const updatedUsers = users.map(user => 
+  //     user.id === id ? { ...user, ...updatedData} : user
+  //   );
+
+  //   setUsers(updatedUsers);
+
+  //   //Sych with localStorage
+  //   localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+  //   //show success message
+  //   setMessage("User Updated Successfully!")
+  // }
+
   return (
     <div className="container">
       <h1> Registration Form </h1>
@@ -192,12 +206,23 @@ function App() {
             <li key={user.id}>
               {user.firstName} {user.lastName} - {user.email}
               <button onClick={() => deleteUser(user.id)}>Delete</button>
+              {/* <button onClick={() => {
+                const newFirstName = prompt("Enter new first name: ", user.firstName);
+                const newLastName = prompt("Enter user Last Name: ", user.lastName);
+                const newEmail = prompt("Enter new email: ", user.email);
+                const newPassword = prompt("Enter new password: ", user.password);
+                const newConfirmPassword = prompt("Enter confirm password: ", user.confirmPassword);
+
+                
+              }}>Edit </button> */}
             </li>
           ))}
         </ul>
       ) : (
         <p>No registered users.</p>
       )}
+
+
     </div>
   )
 }
